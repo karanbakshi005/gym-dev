@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Geist, Geist_Mono, Oswald, Roboto } from "next/font/google";
+import "../styles/globals.css";
+
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +19,11 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "900"],
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +37,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-grey-200  ">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} ${roboto.variable} antialiased w-full max-w-480 mx-auto bg-white-800`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -34,3 +34,80 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+{# --------------------------------------- #}
+Folder structure (recommended)
+/gym-next-magnolia
+├─ app/ # Next.js app router
+│ ├─ api/booking/route.ts # booking API (Stripe, DB)
+│ ├─ layout.tsx
+│ ├─ page.tsx # home
+│ ├─ trainers/[id]/page.tsx
+│ ├─ classes/[slug]/page.tsx
+│ └─ blog/[slug]/page.tsx
+├─ components/
+│ ├─ Header.tsx
+│ ├─ Footer.tsx
+│ ├─ TrainerCard.tsx
+│ └─ ClassCard.tsx
+├─ lib/
+│ ├─ magnolia.ts # fetch helpers
+│ ├─ stripe.ts
+│ └─ db.ts # Prisma client (optional)
+├─ public/
+├─ styles/
+├─ prisma/ # prisma schema (optional)
+├─ package.json
+└─ next.config.js
+
+{# -----------------with env and .env.local----- #}
+my-nextjs-project/
+│
+├── .env                # Environment variables for production & build time
+├── .env.local          # Local environment variables (git ignore)
+├── .gitignore
+├── next.config.mjs
+├── package.json
+├── README.md
+│
+├── public/             # Static assets (images, icons, fonts)
+│   ├── favicon.ico
+│   └── logo.png
+│
+├── src/
+│   ├── app/            # App Router system (pages & routes)
+│   │   ├── layout.jsx  # Root layout
+│   │   ├── page.jsx    # Home page
+│   │   ├── api/        # API Routes
+│   │   │   └── hello/route.js
+│   │   ├── dashboard/
+│   │       ├── page.jsx
+│   │       └── layout.jsx
+│   │
+│   ├── components/     # Reusable UI components
+│   │   └── Header.jsx
+│   │
+│   ├── lib/            # Utils, constants
+│   ├── styles/         # CSS / SCSS / Tailwind
+│   │   └── globals.css
+│   └── hooks/          # Custom hooks
+│
+├── prisma/             # Optional: Database schema if using Prisma
+│   └── schema.prisma
+│
+└── node_modules/
+{# ------------------ #}
+src/
+ ├─ app/
+ │   ├─ page.tsx        
+ │   ├─ about/page.tsx
+ │   ├─ pricing/page.tsx
+ │   ├─ trainers/page.tsx
+ │   └─ contact/page.tsx
+ ├─ components/
+ │   ├─ Navbar.tsx
+ │   ├─ Hero.tsx
+ │   ├─ PricingCard.tsx
+ │   └─ Footer.tsx
+ ├─ lib/
+ └─ styles/
