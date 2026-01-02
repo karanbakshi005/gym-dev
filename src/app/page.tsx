@@ -3,6 +3,10 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Classes from "@/components/Classes";
 import Team from "@/components/Team";
+import Membership from "@/components/Membership";
+import Testimonial from "@/components/Testimonial";
+import Blog from "@/components/Blog";
+import Brand from "@/components/Brand";
 
 export default function Home() {
   return (
@@ -11,7 +15,11 @@ export default function Home() {
         <Hero />
         <About />
         <Classes />
-         <Team />
+        <Team />
+        <Membership />
+        <Testimonial />
+        <Blog />
+        <Brand/>
       </main>
     </div>
   );
