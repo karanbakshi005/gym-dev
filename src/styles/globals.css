@@ -1,7 +1,4 @@
 @import "tailwindcss";
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 
 @layer base {
   body {
@@ -32,5 +29,16 @@
   .h5 {
     @apply text-[22px]
   }
- 
+}
+
+@theme {
+  --color-brand: #d4000d;
+  --color-primary: #333;
+  --color-primary-100: #484848;
+  --color-primary-200: #151515;
+  --color-primary-300: #111;
+}
+
+.active{
+  @apply text-brand;
 }

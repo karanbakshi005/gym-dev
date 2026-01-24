@@ -38,9 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-grey-200  ">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} ${roboto.variable} antialiased w-full max-w-480 mx-auto bg-white-800`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} ${roboto.variable} antialiased w-full max-w-480 mx-auto bg-white-800`}>
         <Header />
         {children}
         <Footer />

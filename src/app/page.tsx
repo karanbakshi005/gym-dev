@@ -7,6 +7,7 @@ import Membership from "@/components/Membership";
 import Testimonial from "@/components/Testimonial";
 import Blog from "@/components/Blog";
 import Brand from "@/components/Brand";
+import Price from "@/components/Price";
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
         <Team />
         <Membership />
         <Testimonial />
-        <Blog />
+        <Price/>
+        <Blog />  
         <Brand/>
       </main>
     </div>
