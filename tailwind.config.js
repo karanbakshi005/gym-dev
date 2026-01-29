@@ -11,10 +11,6 @@ module.exports = {
       geist: ["var(--font-geist-sans)"],
       roboto: ["var(--font-roboto)"],
     },
-    backgroundImage: {
-      hero: "url(/assets/img/hero/bg.png)",
-      membership: "url(/assets/img/membership/bg.jpg)",
-    },
 
     extend: {},
   },
