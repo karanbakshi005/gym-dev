@@ -37,8 +37,9 @@ const statsContainerVariant = {
     opacity: 1,
     transition: {
       staggerChildren: 0.4,
-      duration: 0.5,
-      ease: "linear",
+      duration: 0.5
+      // ,
+      // ease: "linear",
     },
   },
 };
@@ -49,8 +50,9 @@ const statsItem = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
-      ease: [0.25, 0.6, 0.3, 0.8],
+      duration: 0.5
+      // ,
+      // ease: [0.25, 0.6, 0.3, 0.8],
     },
   },
 };
@@ -58,6 +60,7 @@ const statsItem = {
 const Achievements = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
+  
 
   return (
     <section>
