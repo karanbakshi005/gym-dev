@@ -1,4 +1,4 @@
-"use client";
+  "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variants";
@@ -79,7 +79,7 @@ const Classes = () => {
                     {item.description}
                   </motion.p >
                   <motion.div
-                   variants={fadeIn("up", 0.6)}
+                   variants={fadeIn("up", 0.8)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.2 }}>  

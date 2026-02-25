@@ -85,7 +85,7 @@ const Achievements = () => {
                     items-center justify-center text-5xl rounded-full"
                   >
                     {/* render the count up animation only the components is in view isInView is true() */}
-                    {isInView && (
+                    {isInView && (  
                       <CountUp start={0} end={item.number} duration={6} />
                     )}
                   </div>
