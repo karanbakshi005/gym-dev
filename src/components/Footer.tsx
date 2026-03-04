@@ -21,7 +21,7 @@ const footerContainerVariant = {
     transition: {
       staggerChildren: 0.6,
       duration: 0.5,
-      ease: "linear",
+      ease: [0.25, 0.6, 0.3, 0.8] as const,
     },
   },
 };
@@ -35,7 +35,7 @@ const footerItem = {
     opacity: 1,
     transition: {
       duration: 0.5,
-      ease: [0.25, 0.6, 0.3, 0.8],
+      ease: [0.25, 0.6, 0.3, 0.8] as const,
     },
   },
 };
