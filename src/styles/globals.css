@@ -37,8 +37,20 @@
   --color-primary-100: #484848;
   --color-primary-200: #151515;
   --color-primary-300: #111;
-}
+
+
+    --bg-hero: url(/assets/img/hero/bg.png);
+    --bg-membership: url(/assets/img/membership/bg.jpg);
+  }
+
+
 
 .active{
   @apply text-brand;
 }
+
+.background-hero{
+  background-image:var(--bg-hero);
+}
+
+
