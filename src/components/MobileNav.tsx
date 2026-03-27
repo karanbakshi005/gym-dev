@@ -1,7 +1,6 @@
 "use client";
 import { Link as ScrollLink } from "react-scroll";
-import useMediaQuery from '@mui/material/useMediaQuery'
-
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const links = [
   { name: "home", target: "home", offset: -100 },
@@ -11,11 +10,13 @@ const links = [
   { name: "prices", target: "prices", offset: -40 },
   { name: "testimonial", target: "testimonial", offset: 0 },
   { name: "blog", target: "blog", offset: 0 },
+  { name: "membership", target: "membership", offset: 0 },
+  { name: "brand", target: "brand", offset: 0 },
   { name: "contact", target: "contact", offset: 0 },
 ];
 
 const MobileNav = ({ containerStyles }: { containerStyles: string }) => {
-  const isMobile = useMediaQuery('(max-width:640px)')
+  const isMobile = useMediaQuery("(max-width:640px)");
   return (
     <nav className={`${containerStyles}`}>
       {links.map((link, index) => {
@@ -25,7 +26,7 @@ const MobileNav = ({ containerStyles }: { containerStyles: string }) => {
             to={link.target}
             smooth
             spy
-            activeClass={`${!isMobile && 'active'}`}
+            activeClass={`${!isMobile && "active"}`}
             className="cursor-pointer hover:text-brand transition-all"
             key={index}
           >
